@@ -13,7 +13,7 @@ import { useApp } from '@/store/AppContext';
 import { Card, EmptyState, PageHeader, StatusBadge } from '@/components/ui';
 import { formatDate } from '@/lib/utils';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 type SampleStatus = 'PENDING' | 'APPROVED' | 'PROCESSING' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED';
 
